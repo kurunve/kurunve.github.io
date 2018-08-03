@@ -1,17 +1,48 @@
 <html>
   <head>
+        <style type="text/css">
+            body {
+                width:100vh;
+                height:100vh; 
+                background: url('bg_big.png');
+                background-size: 75%;
+                border:0px;
+                margin:0;
+            }
+
+            .content {
+                position:fixed;
+                top: 50%;
+                left: 50%;
+                width:30em;
+                height:18em;
+                margin-top: -9em; /*set to a negative number 1/2 of your height*/
+                margin-left: -15em; /*set to a negative number 1/2 of your width*/
+                border: 2px solid #ccc;
+                background-color: #f3f3f3;
+                padding: 40px;
+                font-family: monospace;
+                border-radius: 20px;
+            }
+        </style>
   </head>
   <body>
-    <h2>This is personal website of brave Salesforce Developer Volodymyr Antoniuk!</h2>
+    <div class="content" style=" ">
+    <h2>This is personal website of brave Salesforce Developer <br/>Volodymyr Antoniuk!</h2>
+      <p> One day you may expect to see here some blog. Probably! </p>
       <p>Some links: </p>
       <ul>
         <li>
-          <a href="https://www.linkedin.com/in/volodymyrantoniuk?trk=hp-identity-name"> LinkedIn </a>
+          <a href="https://www.linkedin.com/in/volodymyrantoniuk"> LinkedIn </a>
         </li>
         <li>
           <a href="https://salesforce.stackexchange.com/users/18189/kurunve"> SFSE Profile </a>
         </li>
+        <li>
+          <a href="https://twitter.com/v_antoniuk"> Twitter </a>
+        </li>
       </ul>
+  </div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
