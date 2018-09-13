@@ -53,14 +53,25 @@
       </ul>
   </div>
     <script>
-      var ua = navigator.userAgent.toLowerCase();  alert(ua);
-      if (ua.indexOf('safari') != -1) { 
-        if (ua.indexOf('chrome') > -1) {
-          alert("1") // Chrome
-        } else {
-          alert("2") // Safari
+      var myFunction = function(){
+        var ua = navigator.userAgent.toLowerCase();  alert(ua);
+        if (ua.indexOf('safari') != -1) { 
+          if (ua.indexOf('chrome') > -1) {
+            alert("1") // Chrome
+          } else {
+            alert("2") // Safari
+          }
         }
       }
+      if (window.addEventListener) // W3C standard
+      {
+        window.addEventListener('load', myFunction, false); // NB **not** 'onload'
+      } 
+      else if (window.attachEvent) // Microsoft
+      {
+        window.attachEvent('onload', myFunction);
+      }
+
     </script>
   </body>
 </html>
