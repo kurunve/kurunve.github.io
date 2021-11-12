@@ -1,0 +1,49 @@
+<html>
+  <head>
+        <style type="text/css">
+            body {
+                width:100vh;
+                height:100vh; 
+                background: url('bg_big.png');
+                background-size: 75%;
+                border:0px;
+                margin:0;
+            }
+            .content {
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              width: 40em;
+              height: 36em;
+              margin-top: -18em;
+              margin-left: -20em;
+              border: 5px solid #fefefe;
+              background-color: #d0d0d0;
+              padding: 40px;
+              font-family: monospace;
+              border-radius: 30px;
+              font-size: 1.2em;
+            }
+        </style>
+  </head>
+  <body>
+    <div class="content">
+    <h2>Timer</h2>
+    <p id="demo"></p>
+  </div>
+    <script>
+        let theTicks = 3302844000000;
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var delta = theTicks - now;
+            if (delta < 0) {
+              clearInterval(x);
+              document.getElementById("demo").innerHTML = "EXPIRED";
+            } else {
+              document.getElementById("demo").innerHTML = delta;
+            }
+          }, 10);
+    </script>
+  </body>
+</html>
+
